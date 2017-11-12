@@ -34,6 +34,7 @@ use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GenericProviderConfigu
 use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GithubProviderConfigurator;
 use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GitlabProviderConfigurator;
 use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\GoogleProviderConfigurator;
+use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\HarvestProviderConfigurator;
 use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\HeadHunterProviderConfigurator;
 use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\HerokuProviderConfigurator;
 use KnpU\OAuth2ClientBundle\DependencyInjection\Providers\InstagramProviderConfigurator;
@@ -101,6 +102,7 @@ class KnpUOAuth2ClientExtension extends Extension
         'facebook' => FacebookProviderConfigurator::class,
         'fitbit' => FitbitProviderConfigurator::class,
         'four_square' => FoursquareProviderConfigurator::class,
+        'harvest' => HarvestProviderConfigurator::class,
         'headhunter' => HeadHunterProviderConfigurator::class,
         'heroku' => HerokuProviderConfigurator::class,
         'instagram' => InstagramProviderConfigurator::class,
