@@ -79,6 +79,7 @@ via Composer:
 | [Harvest](https://github.com/nilesuan/oauth2-harvest)                 | composer require nilesuan/oauth2-harvest            |
 | [HeadHunter](https://github.com/AlexMasterov/oauth2-headhunter)       | composer require alexmasterov/oauth2-headhunter     |
 | [Heroku](https://github.com/stevenmaguire/oauth2-heroku)              | composer require stevenmaguire/oauth2-heroku        |
+| [Imgur](https://github.com/adam-paterson/oauth2-imgur)                | composer require adam-paterson/oauth2-imgur         |
 | [Instagram](https://github.com/thephpleague/oauth2-instagram)         | composer require league/oauth2-instagram            |
 | [GitHub](https://github.com/thephpleague/oauth2-github)               | composer require league/oauth2-github               |
 | [GitLab](https://github.com/omines/oauth2-gitlab)                     | composer require omines/oauth2-gitlab               |
@@ -716,6 +717,22 @@ knpu_oauth2_client:
             client_secret: %heroku_client_secret%
             # a route name you'll create
             redirect_route: connect_heroku_check
+            redirect_params: {}
+
+            # whether to check OAuth2 "state": defaults to true
+            # use_state: true
+
+        # will create service: "knpu.oauth2.client.imgur"
+        # an instance of: KnpU\OAuth2ClientBundle\Client\Provider\ImgurClient
+        # composer require adam-paterson/oauth2-imgur
+        imgur:
+            # must be "imgur" - it activates that type!
+            type: imgur
+            # add and configure client_id and client_secret in parameters.yml
+            client_id: %imgur_client_id%
+            client_secret: %imgur_client_secret%
+            # a route name you'll create
+            redirect_route: connect_imgur_check
             redirect_params: {}
 
             # whether to check OAuth2 "state": defaults to true
