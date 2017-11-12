@@ -90,6 +90,7 @@ via Composer:
 | [Microsoft](https://github.com/stevenmaguire/oauth2-microsoft)        | composer require stevenmaguire/oauth2-microsoft     |
 | [Mollie](https://github.com/mollie/oauth2-mollie-php)                 | composer require mollie/oauth2-mollie-php           |
 | [Odnoklassniki](https://github.com/rakeev/oauth2-odnoklassniki)       | composer require aego/oauth2-odnoklassniki          |
+| [Optimizely](https://github.com/WiderFunnel/OAuth2-Optimizely)        | composer require widerfunnel/oauth2-optimizely      |
 | [Paypal](https://github.com/stevenmaguire/oauth2-paypal)              | composer require stevenmaguire/oauth2-paypal        |
 | [PSN](https://github.com/larabros/oauth2-psn)                         | composer require larabros/oauth2-psn                |
 | [Salesforce](https://github.com/stevenmaguire/oauth2-salesforce)      | composer require stevenmaguire/oauth2-salesforce    |
@@ -913,6 +914,22 @@ knpu_oauth2_client:
             client_secret: %odnoklassniki_client_secret%
             # a route name you'll create
             redirect_route: connect_odnoklassniki_check
+            redirect_params: {}
+
+            # whether to check OAuth2 "state": defaults to true
+            # use_state: true
+
+        # will create service: "knpu.oauth2.client.optimizely"
+        # an instance of: KnpU\OAuth2ClientBundle\Client\Provider\OptimizelyClient
+        # composer require widerfunnel/oauth2-optimizely
+        optimizely:
+            # must be "optimizely" - it activates that type!
+            type: optimizely
+            # add and configure client_id and client_secret in parameters.yml
+            client_id: %optimizely_client_id%
+            client_secret: %optimizely_client_secret%
+            # a route name you'll create
+            redirect_route: connect_optimizely_check
             redirect_params: {}
 
             # whether to check OAuth2 "state": defaults to true
